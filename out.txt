@@ -1,0 +1,27 @@
+
+Not having any errors and being all green
+  NameError
+    raises a NameError when encountering undefined barewords (FAILED - 1)
+
+Failures:
+
+  1) Not having any errors and being all green NameError raises a NameError when encountering undefined barewords
+     Failure/Error:
+       expect{
+         load './lib/a_name_error.rb'
+       }.to_not raise_error
+
+       expected no Exception, got #<NameError: undefined local variable or method `hello_world' for main:Object> with backtrace:
+         # ./lib/a_name_error.rb:3:in `<top (required)>'
+         # ./spec/no_ruby_errors_spec.rb:6:in `load'
+         # ./spec/no_ruby_errors_spec.rb:6:in `block (4 levels) in <top (required)>'
+         # ./spec/no_ruby_errors_spec.rb:5:in `block (3 levels) in <top (required)>'
+     # ./spec/no_ruby_errors_spec.rb:5:in `block (3 levels) in <top (required)>'
+
+Finished in 0.03001 seconds (files took 0.16528 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/no_ruby_errors_spec.rb:4 # Not having any errors and being all green NameError raises a NameError when encountering undefined barewords
+
